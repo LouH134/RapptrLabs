@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="Rapptr_iOS_Test" customModuleProvider="target">
+            <connections>
+                <outlet property="btnLeft" destination="ICk-Fs-CeU" id="EXj-j7-Uo9"/>
+                <outlet property="lblTitle" destination="957-Wc-teo" id="exE-N4-vul"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="tsm-IG-3yb">
+            <rect key="frame" x="0.0" y="0.0" width="466" height="158"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICk-Fs-CeU">
+                    <rect key="frame" x="0.0" y="16" width="48" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="n25-Vd-VUN"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="icons8-back-24"/>
+                    <connections>
+                        <action selector="backBtnPressed:" destination="-1" eventType="touchUpInside" id="a7g-qN-fQE"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="957-Wc-teo">
+                    <rect key="frame" x="0.0" y="16" width="466" height="38"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="5bJ-3u-JGf"/>
+            <color key="backgroundColor" red="0.054901960780000002" green="0.36078431370000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="957-Wc-teo" firstAttribute="leading" secondItem="5bJ-3u-JGf" secondAttribute="leading" id="6EX-Lv-osC"/>
+                <constraint firstItem="ICk-Fs-CeU" firstAttribute="top" secondItem="957-Wc-teo" secondAttribute="top" id="II7-cu-4Uc"/>
+                <constraint firstItem="5bJ-3u-JGf" firstAttribute="trailing" secondItem="957-Wc-teo" secondAttribute="trailing" id="Pjk-lM-wS9"/>
+                <constraint firstItem="ICk-Fs-CeU" firstAttribute="leading" secondItem="tsm-IG-3yb" secondAttribute="leading" id="Q4R-37-buW"/>
+                <constraint firstItem="ICk-Fs-CeU" firstAttribute="bottom" secondItem="957-Wc-teo" secondAttribute="bottom" id="lSi-UT-8z3"/>
+                <constraint firstItem="957-Wc-teo" firstAttribute="top" secondItem="5bJ-3u-JGf" secondAttribute="top" constant="16" id="meB-id-m9R"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-463.125" y="500.7042253521127"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icons8-back-24" width="24" height="24"/>
+    </resources>
+</document>

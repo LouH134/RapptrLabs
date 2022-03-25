@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
+            <connections>
+                <outlet property="txtEmail" destination="gqR-Vb-WUI" id="CYx-3G-TfT"/>
+                <outlet property="txtPassword" destination="eOC-I0-uhi" id="wGf-EL-jaD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vco-E3-3gn" customClass="HeaderView" customModule="Rapptr_iOS_Test" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                    <color key="backgroundColor" red="0.054901960780000002" green="0.36078431370000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="1De-ee-qtP"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hideLeftBtn" value="NO"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="setTitle" value="Login"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_login" translatesAutoresizingMaskIntoConstraints="NO" id="lJM-1M-ecN">
+                    <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="hSn-OF-Bgj">
+                    <rect key="frame" x="30" y="185" width="315" height="213"/>
+                    <subviews>
+                        <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gqR-Vb-WUI">
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="Nfi-vT-sev"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOC-I0-uhi">
+                            <rect key="frame" x="0.0" y="79" width="315" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="WEt-Iz-mgk"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyz-EI-oPI">
+                            <rect key="frame" x="0.0" y="158" width="315" height="55"/>
+                            <color key="backgroundColor" red="0.054901960780000002" green="0.36078431370000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="mto-82-oUJ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Login">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="didPressLoginButton:" destination="-1" eventType="touchUpInside" id="Cth-NC-REX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hSn-OF-Bgj" firstAttribute="top" secondItem="vco-E3-3gn" secondAttribute="bottom" constant="65" id="75T-8T-q4X"/>
+                <constraint firstItem="lJM-1M-ecN" firstAttribute="top" secondItem="vco-E3-3gn" secondAttribute="bottom" id="Bsr-BA-oDW"/>
+                <constraint firstItem="lJM-1M-ecN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LfC-HK-UvV"/>
+                <constraint firstAttribute="trailing" secondItem="vco-E3-3gn" secondAttribute="trailing" id="gTW-w2-Lbt"/>
+                <constraint firstAttribute="trailing" secondItem="lJM-1M-ecN" secondAttribute="trailing" id="haW-a5-8S9"/>
+                <constraint firstItem="vco-E3-3gn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ieN-y3-WHc"/>
+                <constraint firstAttribute="trailing" secondItem="hSn-OF-Bgj" secondAttribute="trailing" constant="30" id="nH4-tv-gHj"/>
+                <constraint firstItem="vco-E3-3gn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tso-Uy-y3v"/>
+                <constraint firstAttribute="bottom" secondItem="lJM-1M-ecN" secondAttribute="bottom" id="yZG-y6-XE3"/>
+                <constraint firstItem="hSn-OF-Bgj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="zda-vd-xCu"/>
+            </constraints>
+            <point key="canvasLocation" x="551.44927536231887" y="313.05803571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_login" width="376" height="667"/>
+    </resources>
+</document>

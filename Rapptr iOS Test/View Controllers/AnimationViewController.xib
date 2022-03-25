@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationViewController">
+            <connections>
+                <outlet property="imgLogo" destination="5DT-RY-uzd" id="ms7-id-sxc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4X-eb-ZnV">
+                    <rect key="frame" x="30" y="582" width="315" height="55"/>
+                    <color key="backgroundColor" red="0.054901960780000002" green="0.36078431370000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="nev-eM-zlk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <state key="normal" title="Fade In">
+                        <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didPressFade:" destination="-1" eventType="touchUpInside" id="9GZ-O4-LtL"/>
+                    </connections>
+                </button>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5DT-RY-uzd" userLabel="Logo Image">
+                    <rect key="frame" x="30" y="129" width="315" height="74"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="ezN-3T-KBc" appends="YES" id="FNH-CH-EhH"/>
+                    </connections>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IxJ-ko-WBN" customClass="HeaderView" customModule="Rapptr_iOS_Test" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                    <color key="backgroundColor" red="0.054901960780000002" green="0.36078431370000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="qJZ-7g-MYT"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="setTitle" value="Animation"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hideLeftBtn" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="R4X-eb-ZnV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="4t1-Da-HRu"/>
+                <constraint firstItem="IxJ-ko-WBN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9Fc-Tc-3Xo"/>
+                <constraint firstAttribute="trailing" secondItem="R4X-eb-ZnV" secondAttribute="trailing" constant="30" id="RSu-rg-MrO"/>
+                <constraint firstAttribute="trailing" secondItem="IxJ-ko-WBN" secondAttribute="trailing" id="ehd-jf-kO9"/>
+                <constraint firstAttribute="bottom" secondItem="R4X-eb-ZnV" secondAttribute="bottom" constant="30" id="lg0-TO-qyo"/>
+                <constraint firstItem="IxJ-ko-WBN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rxo-FO-if4"/>
+            </constraints>
+            <point key="canvasLocation" x="34.399999999999999" y="54.422788605697157"/>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="ezN-3T-KBc">
+            <connections>
+                <action selector="handlePan:" destination="-1" id="jm3-8l-h1o"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="ic_logo" width="317" height="74"/>
+    </resources>
+</document>
